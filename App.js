@@ -1,59 +1,53 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
-import Item from './components/item/item';
-import ViewExample from './components/view/view_example';
-import MyTextEvent from './components/event_handling/my_text_event';
-import MyTextUseState from './components/react_hooks/my_text_use_state';
-import {Margin} from './style/margin';
-import {View} from 'react-native';
-import MyTextUseEffect from './components/react_hooks/my_text_use_effects';
-import MyTextUseRef from './components/react_hooks/my_text_use_reft';
-import MyHomeUseContextExample from './components/react_hooks/use_context/home_use_context';
-import HomeCustomHooks from './components/react_hooks/custom_hooks/home_custom_hooks';
+import {SafeAreaView, ScrollView, View} from 'react-native';
+import MyText from './components/my_text';
+import Margin from './style/margin';
+import ImageComponent from './components/image/image_component';
+import TextInputComponent from './components/text_input/text_input_component';
+import ScrollViewComponent from './components/scroll_view/scroll_view_component';
+import BtnAndFormComponent from './components/button_and_form/btn_and_form_component';
+import SwitchComponent from './components/switch/switch_component';
+import IconComponent from './components/icon/icon_component';
 
 const App = () => {
   return (
     <SafeAreaView>
-      {/* Inline style */}
-      <ViewExample />
+      <ScrollView>
+        {/* Class Component Text */}
+        <MyText name={'Fahmi'} />
 
-      <View style={Margin.vertical} />
+        <View style={Margin.vertical} />
 
-      {/* Prop paramaters */}
-      <Item name={'Table'} price={20} />
-      <Item name={'Chair'} price={100} />
-      <Item name={'Desk'} price={200} />
-      <Item name={'Pencil'} price={20} />
+        {/* Image Component */}
+        <ImageComponent />
 
-      <View style={Margin.vertical} />
+        <View style={Margin.vertical} />
 
-      {/* Event Handling */}
-      <MyTextEvent />
+        {/* Text Input Component */}
+        <TextInputComponent />
 
-      <View style={Margin.vertical} />
+        <View style={Margin.vertical} />
 
-      {/* Use State */}
-      <MyTextUseState />
+        {/* Scroll View Component */}
+        <ScrollViewComponent />
 
-      <View style={Margin.vertical} />
+        <View style={Margin.vertical} />
 
-      {/* Use Effect */}
-      <MyTextUseEffect />
+        {/* Button And Form Component */}
+        <BtnAndFormComponent />
 
-      <View style={Margin.vertical} />
+        <View style={Margin.vertical} />
 
-      {/* Use Ref */}
-      <MyTextUseRef />
+        {/* Switch Component */}
+        <SwitchComponent />
 
-      <View style={Margin.vertical} />
+        <View style={Margin.vertical} />
 
-      {/* Use Context */}
-      <MyHomeUseContextExample />
+        {/* Icon Component */}
+        <IconComponent />
 
-      <View style={Margin.vertical} />
-
-      {/* Custom Hooks */}
-      <HomeCustomHooks />
+        <View style={Margin.vertical} />
+      </ScrollView>
     </SafeAreaView>
   );
 };
